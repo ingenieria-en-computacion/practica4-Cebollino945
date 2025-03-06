@@ -16,5 +16,5 @@ int main(){
         free(arreglo); //libera la memoria     
         arreglo = NULL;  
     }
-    return 0;
+    return 0; 
 }

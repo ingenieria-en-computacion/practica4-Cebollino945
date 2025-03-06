@@ -18,5 +18,5 @@ int main(){
         free(arreglo);      
         arreglo = NULL;  
     }
-    return 0;
+    return 0; 
 }
