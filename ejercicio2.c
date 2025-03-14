@@ -4,9 +4,9 @@
 int main() {
     int m, n;
     
-    printf("Ingrese el número de filas (m): ");
+    printf("Ingrese el numero de filas (m): ");
     scanf("%d", &m);
-    printf("Ingrese el número de columnas (n): ");
+    printf("Ingrese el numero de columnas (n): ");
     scanf("%d", &n);
 
     int *matriz = (int *)calloc(m * n, sizeof(int));
@@ -27,7 +27,7 @@ int main() {
     // Permite al usuario modificar valores
     int fila, columna, valor, continuar;
     do {
-        printf("\nIngrese la fila y columna del valor a modificar (0-indexado): ");
+        printf("\nIngrese la fila y columna del valor a modificar: ");
         scanf("%d %d", &fila, &columna);
         if (fila >= 0 && fila < m && columna >= 0 && columna < n) {
             printf("Ingrese el nuevo valor: ");
