@@ -15,7 +15,6 @@ int main() {
         return 1;
     }
 
-    // Se imprime la matriz inicializada con ceros
     printf("\nMatriz inicializada con ceros:\n");
     for (int i = 0; i < m; i++) {
         for (int j = 0; j < n; j++) {
@@ -24,20 +23,25 @@ int main() {
         printf("\n");
     }
 
-    // Permite al usuario modificar valores
+    // Permitir al usuario modificar valores
     int fila, columna, valor, continuar;
     do {
-        printf("\nIngrese la fila y columna del valor a modificar: ");
+        printf("\nIngrese la fila y columna del valor a modificar (rango: 1-%d para filas y 1-%d para columnas): ", m, n);
         scanf("%d %d", &fila, &columna);
+
+        // Ajustar a índices basados en 0
+        fila--;
+        columna--;
+
         if (fila >= 0 && fila < m && columna >= 0 && columna < n) {
             printf("Ingrese el nuevo valor: ");
             scanf("%d", &valor);
             matriz[fila * n + columna] = valor;
         } else {
-            printf("Posición fuera de rango.\n");
+            printf("Posición fuera de rango. Intente de nuevo.\n");
         }
         
-        printf("¿Desea modificar otro valor? (1: Sí, 0: No): ");
+        printf("¿Desea modificar otro valor? (1: Si, 0: No): ");
         scanf("%d", &continuar);
     } while (continuar);
 
@@ -53,3 +57,4 @@ int main() {
     free(matriz);
     return 0;
 }
+
